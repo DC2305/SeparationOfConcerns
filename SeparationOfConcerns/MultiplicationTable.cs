@@ -8,13 +8,17 @@ public class MultiplicationTable
         var biggest = int.MinValue;
         foreach (var number in numbers)
         {
-            if (number < 0)
+            /*if (number < 0)
             {
                 throw new ArgumentException("negative numbers are not supported");
-            }
+            }*/
             if (number > biggest)
             {
                 biggest = number;
+            }
+            else if (number < 0)
+            {
+                throw new ArgumentException("negative numbers are not supported");
             }
         }
 
